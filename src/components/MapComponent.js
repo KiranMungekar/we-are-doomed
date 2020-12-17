@@ -1,17 +1,18 @@
-import ReactMapGL from 'react-map-gl';
+import ReactMapGL, { Marker } from 'react-map-gl';
 
-const MapboxMap = (props)=>{
+import Markers from './MarkersComponent';
 
-
+const MapboxMap = ({viewport, events,updateViewport})=>{
 
     return(
     <ReactMapGL
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        {...props.viewport} 
-        onViewportChange={viewport=>props.updateViewport(viewport)}
+        {...viewport} 
+        onViewportChange={viewports=>updateViewport(viewports)}
         mapStyle={process.env.REACT_APP_MAPBOX_STYLE}
-     >
-          Disaster map
+    >
+        <Markers eventData= {events}/>
+        
     </ReactMapGL>)
 
 
