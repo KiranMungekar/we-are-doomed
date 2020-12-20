@@ -9,7 +9,7 @@ const Markers =({eventData})=>{
         
            return (
                 <Marker key={eve.id} latitude={eve.geometry[0].coordinates[1]} longitude={eve.geometry[0].coordinates[0]}>
-                  <IconComponent />
+                  <IconComponent id={eve.categories[0].id} />
                 </Marker>
            )
         
