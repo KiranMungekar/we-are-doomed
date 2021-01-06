@@ -1,6 +1,7 @@
 import ReactMapGL, { Marker } from 'react-map-gl';
 
 import Markers from './MarkersComponent';
+import SearchComponent from './SearchBoxComponent';
 
 const MapboxMap = ({viewport, events,updateViewport})=>{
 
@@ -11,6 +12,7 @@ const MapboxMap = ({viewport, events,updateViewport})=>{
         onViewportChange={viewports=>updateViewport(viewports)}
         mapStyle={process.env.REACT_APP_MAPBOX_STYLE}
     >
+        <SearchComponent />
         <Markers eventData= {events}/>
         
     </ReactMapGL>)

@@ -7,7 +7,7 @@ import {DROUGHT,FLOOD,EARTHQUAKE,LANDSLIDE,S_STORM,VOLCANO,WILDFIRE } from '../u
 
 
 const IconComponent = ({id})=>{
-    console.log(id);
+    //console.log(id);
 
     const whichIcon=(indicator)=>{
         switch(indicator){
@@ -35,9 +35,9 @@ const IconComponent = ({id})=>{
 
     return(
         
-    <IconContext.Provider  value={{color:'red', size:'2em'}}>
-        {whichIcon(id)}
-    </IconContext.Provider>
+        <IconContext.Provider  value={{color:'red', size:'2em'}}>
+            {whichIcon(id)}
+        </IconContext.Provider>
     )
 }
 
